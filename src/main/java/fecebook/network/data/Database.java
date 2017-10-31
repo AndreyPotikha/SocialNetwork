@@ -7,9 +7,9 @@ public class Database {
 
     public static User[] getUsers() {
         return new User[]{
-                new User("Alex", "Smith", 29),
-                new User("Bob", "Bobkin", 30),
-                new User("Andry", "Potikha", 25)};
+                new User("Alex", "Smith", 29, "developer"),
+                new User("Bob", "Bobkin", 30, "policeman"),
+                new User("Andry", "Potikha", 25, "engineer")};
 
     }
 

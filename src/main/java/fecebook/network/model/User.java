@@ -7,6 +7,7 @@ public class User {
     private int age;
     private String proffesion;
 
+
     @Override
     public String toString() {
         return "User"
@@ -15,16 +16,19 @@ public class User {
                 + " surname: "
                 + surname
                 + " age: "
-                + age;
+                + age
+                + " professional: "
+                + proffesion;
     }
 
     public User() {
     }
 
-    public User(String name, String surname, int age) {
+    public User(String name, String surname, int age, String proffesion) {
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.proffesion = proffesion;
     }
 
     public String getName() {
