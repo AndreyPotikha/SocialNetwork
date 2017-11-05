@@ -13,7 +13,7 @@ public class MessageService {
         final User user = new User();
         user.setName("Alex");
         user.setSurname("Smirnov");
-        MessageBuilder builder = new HappyChack();
+        MessageBuilder builder = new HappyBuilder();
 
         final String message = builder.build(user);
         System.out.println(message);

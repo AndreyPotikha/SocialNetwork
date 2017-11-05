@@ -15,8 +15,8 @@ public class UserService {
 //        getLast();
 //        System.out.println(getByName("Alex"));
         System.out.println(getBySurname("Smith"));
-        System.out.println(getByAge(30));
-        System.out.println(getByProffesion("engineer"));
+//        System.out.println(getByAge(30));
+//        System.out.println(getByProffesion("engineer"));
 
 
         // Пример подключение своей библиотеке.
