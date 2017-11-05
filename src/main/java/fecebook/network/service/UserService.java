@@ -3,6 +3,8 @@ package fecebook.network.service;
 import fecebook.network.data.Database;
 import fecebook.network.model.User;
 
+import java.util.List;
+
 public class UserService {
 
     // todo metod getAll(), getFirst
@@ -14,9 +16,9 @@ public class UserService {
 //        getFirst();
 //        getLast();
 //        System.out.println(getByName("Alex"));
-        System.out.println(getBySurname("Smith"));
+//        System.out.println(getBySurname("Smith"));
 //        System.out.println(getByAge(30));
-//        System.out.println(getByProffesion("engineer"));
+        System.out.println(getByProffesion("developer"));
 
 
         // Пример подключение своей библиотеке.
@@ -28,7 +30,8 @@ public class UserService {
     }
 
     private static User getByProffesion(String proffesion) {
-        User[] users = Database.getUsers();
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
         for (User user : users) {
             if (proffesion.equals(user.getProffesion())) {
                 return user;
@@ -38,7 +41,8 @@ public class UserService {
     }
 
     private static User getByAge(int age) {
-        User[] users = Database.getUsers();
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
         for (User user : users) {
             if (age == user.getAge()) {
                 return user;
@@ -48,7 +52,8 @@ public class UserService {
     }
 
     private static User getBySurname(String surname) {
-        User[] users = Database.getUsers();
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
         for (User user : users) {
             if (surname.equals(user.getSurname())) {
                 return user;
@@ -58,7 +63,8 @@ public class UserService {
     }
 
     private static User getByName(String name) {
-        User[] users = Database.getUsers();
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
         for (User user : users) {
             if (name.equals(user.getName())) {
                 return user;
@@ -68,17 +74,22 @@ public class UserService {
     }
 
     private static void getLast() {
-        User[] users = Database.getUsers();
-        System.out.println(users[users.length-1]);
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
+        System.out.println(users.size() - 1);
+
     }
 
     private static void getFirst() {
-        User[] users = Database.getUsers();
-        System.out.println(users[0]);
+        List<User> users = Database.getUsers();
+        System.out.println(users.size() - 1);
+//        User[] users = Database.getUsers();
+//        System.out.println(users[0]);
     }
 
     private static void getAll() {
-        User[] users = Database.getUsers();
+        List<User> users = Database.getUsers();
+//        User[] users = Database.getUsers();
         for (User user : users) {
             System.out.println(user);
         }
