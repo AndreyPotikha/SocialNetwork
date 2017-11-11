@@ -1,13 +1,10 @@
 package facebookSecond.dao;
 
-import facebookSecond.data.Database;
 import facebookSecond.model.Post;
 
 import java.util.List;
 
-public class PostDao {
+public interface PostDao {
 
-    public List<Post> getAllPost() {
-        return Database.getAllPost();
-    }
+    List<Post> getAllPost();
 }

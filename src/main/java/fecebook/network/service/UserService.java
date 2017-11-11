@@ -7,12 +7,12 @@ import java.util.List;
 
 public class UserService {
 
-    // todo metod getAll(), getFirst
+    // todo metod getAllUser(), getFirst
 
     public static void main(String[] args) {
  //       User alex = new User("Alex", "Smith", 29, "developer");
 //        System.out.println(alex);
-//        getAll();
+//        getAllUser();
 //        getFirst();
 //        getLast();
 //        System.out.println(getByName("Alex"));

@@ -1,14 +1,10 @@
 package facebookSecond.dao;
 
-
-import facebookSecond.data.Database;
 import facebookSecond.model.User;
 
 import java.util.List;
 
-public class UserDao {
+public interface UserDao {
 
-    public List<User> getAll() {
-        return Database.getAll();
-    }
+    List<User> getAllUser();
 }

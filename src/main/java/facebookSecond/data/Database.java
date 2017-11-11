@@ -1,12 +1,24 @@
 package facebookSecond.data;
 
+import facebookSecond.model.Group;
 import facebookSecond.model.Post;
 import facebookSecond.model.User;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Database {
+
+    public static List<Group> gettAllGroup() {
+        List<Group> groups = new LinkedList<>();
+        Group group = new Group();
+        group.setName("Andrey");
+        group.setDateOfCreate(LocalDate.of(2017, 11, 10));
+        group.setFollowrs("500");
+        groups.add(group);
+        return groups;
+    }
 
     public static List<Post> getAllPost() {
         List<Post> posts = new LinkedList<>();
@@ -17,7 +29,7 @@ public class Database {
         return posts;
     }
 
-    public static List<User> getAll() {
+    public static List<User> getAllUser() {
         List<User> users = new LinkedList<>();
         User user = new User();
         user.setName("Alex");
