@@ -2,7 +2,6 @@ package facebookSecond.controller;
 
 import facebookSecond.model.Post;
 import facebookSecond.service.PostService;
-import facebookSecond.service.PostService1;
 import facebookSecond.service.impl.ServiceImpl;
 
 import java.util.List;
