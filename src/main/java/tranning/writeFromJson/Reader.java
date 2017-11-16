@@ -1,7 +1,10 @@
 package tranning.writeFromJson;
 
+import java.io.IOException;
+import java.util.List;
+
 public interface Reader {
 
-    void read();
+    List<String> read() throws IOException;
 
 }
