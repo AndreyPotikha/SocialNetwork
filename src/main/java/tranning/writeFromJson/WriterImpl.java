@@ -24,6 +24,5 @@ public class WriterImpl implements Writer{
                 e.printStackTrace();
             }
         }
-
     }
 }

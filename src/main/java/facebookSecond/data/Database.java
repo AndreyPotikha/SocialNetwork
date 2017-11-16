@@ -34,6 +34,9 @@ public class Database {
         User user = new User();
         user.setName("Alex");
         users.add(user);
+        User user1 = new User();
+        user1.setName("Bob");
+        users.add(user1);
         return users;
     }
 }

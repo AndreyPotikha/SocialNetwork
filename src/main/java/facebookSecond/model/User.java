@@ -1,6 +1,11 @@
 package facebookSecond.model;
 
 public class User {
+    @Override
+    public String toString() {
+        return "User " +
+                "name='" + name + '\'';
+    }
 
     private String name;
     private String surname;
