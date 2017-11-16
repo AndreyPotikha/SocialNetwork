@@ -2,7 +2,7 @@ package tranning.change;
 
 public interface FileServiceChange {
 
-    void write();
+    void write(String readFile);
 
     String read();
 }
