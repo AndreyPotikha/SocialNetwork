@@ -15,13 +15,33 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public User getByName(String name) {
+    public User findByName(String name) {
         List<User> allUser = Database.getAllUser();
         for (User user : allUser) {
             if (user.getName().equals(name)) {
                 return user;
-            } else {
-                return null;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public User findBySurname(String surname) {
+        List<User> allUsers = Database.getAllUser();
+        for (User user : allUsers) {
+            if (user.getSurname().equals(surname)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public User findByAge(int age) {
+        List<User> allUsers = Database.getAllUser();
+        for (User user : allUsers) {
+            if (user.getAge() == age) {
+                return user;
             }
         }
         return null;

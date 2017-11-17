@@ -4,12 +4,17 @@ public class User {
     @Override
     public String toString() {
         return "User " +
-                "name='" + name + '\'';
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age;
     }
 
     private String name;
     private String surname;
+    private int age;
 
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
     public String getName() {
         return name;
     }

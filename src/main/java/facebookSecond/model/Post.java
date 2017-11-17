@@ -1,18 +1,23 @@
 package facebookSecond.model;
 
+import java.time.LocalDate;
+
 public class Post {
 
     private String title;
     private String description;
+    private LocalDate dateOfPost;
 
     @Override
     public String toString() {
-        return "Post{" +
+        return "Post " +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                '}';
+                ", dateOfPost=" + dateOfPost;
     }
 
+    public LocalDate getDateOfPost() { return dateOfPost; }
+    public void setDateOfPost(LocalDate dateOfPost) { this.dateOfPost = dateOfPost; }
     public String getTitle() {
         return title;
     }
