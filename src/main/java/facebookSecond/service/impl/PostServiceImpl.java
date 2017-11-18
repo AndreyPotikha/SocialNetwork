@@ -30,7 +30,7 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public Post findByData(LocalDate date) {
+    public List<Post> findByData(LocalDate date) {
         if (date == null) {
             return null;
         }

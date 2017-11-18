@@ -5,6 +5,7 @@ import facebookSecond.data.Database;
 import facebookSecond.model.Post;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,13 +28,14 @@ public class PostDaoImpl implements PostDao{
     }
 
     @Override
-    public Post findByDate(LocalDate date) {
+    public List<Post> findByDate(LocalDate date) {
         List<Post> posts = Database.getAllPost();
+        List<Post> returnPost = new ArrayList<>();
         for (Post post : posts) {
             if (post.getDateOfPost().equals(date)) {
-                return post;
+                returnPost.add(post);
             }
         }
-        return null;
+        return returnPost;
     }
 }

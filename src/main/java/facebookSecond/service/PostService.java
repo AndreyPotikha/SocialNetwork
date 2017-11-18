@@ -12,5 +12,5 @@ public interface PostService {
 
     Post findByTitle(String title);
 
-    Post findByData(LocalDate date);
+    List<Post> findByData(LocalDate date);
 }

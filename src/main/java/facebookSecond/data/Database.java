@@ -25,7 +25,7 @@ public class Database {
         Post post = new Post();
         post.setTitle("football news");
         post.setDescription("Dynamo champion");
-        post.setDateOfPost(LocalDate.of(2017, 10, 5));
+        post.setDateOfPost(LocalDate.of(2017, 11, 15));
         posts.add(post);
         Post post1 = new Post();
         post1.setTitle("Boxing News");

@@ -12,5 +12,5 @@ public interface PostDao {
 
     Post findByTitle(String title);
 
-    Post findByDate(LocalDate date);
+    List<Post> findByDate(LocalDate date);
 }

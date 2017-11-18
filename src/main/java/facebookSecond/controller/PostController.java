@@ -18,7 +18,7 @@ public class PostController {
 
 //      Search by data
         PostService postData = new PostServiceImpl();
-        Post data = postTitle.findByData(LocalDate.of(2017, 11, 15));
+        List<Post> data = postTitle.findByData(LocalDate.of(2017, 11, 15));
         System.out.println(data);
        /* PostService postService = new PostServiceImpl();
         List<Post> all = postService.getAllPost();
