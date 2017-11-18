@@ -20,6 +20,7 @@ public class PostController {
         PostService postData = new PostServiceImpl();
         List<Post> data = postTitle.findByData(LocalDate.of(2017, 11, 15));
         System.out.println(data);
+        System.out.println();
        /* PostService postService = new PostServiceImpl();
         List<Post> all = postService.getAllPost();
         for (Post post : all) {
