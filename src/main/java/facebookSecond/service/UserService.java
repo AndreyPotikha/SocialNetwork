@@ -8,9 +8,9 @@ public interface UserService {
 
     List<User> getAllUser();
 
-    User findByName(String name);
+    List<User> findByName(String name);
 
-    User findBySurname(String surname);
+    List<User> findBySurname(String surname);
 
-    User findByAge(int age);
+    List<User> findByAge(int age);
 }

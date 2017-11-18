@@ -4,6 +4,7 @@ import facebookSecond.dao.UserDao;
 import facebookSecond.data.Database;
 import facebookSecond.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao{
@@ -15,35 +16,38 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public User findByName(String name) {
+    public List<User> findByName(String name) {
         List<User> allUser = Database.getAllUser();
+        List<User> retunUsers = new ArrayList<>();
         for (User user : allUser) {
             if (user.getName().equals(name)) {
-                return user;
+                retunUsers.add(user);
             }
         }
-        return null;
+        return retunUsers;
     }
 
     @Override
-    public User findBySurname(String surname) {
+    public List<User> findBySurname(String surname) {
         List<User> allUsers = Database.getAllUser();
+        List<User> retunUsers = new ArrayList<>();
         for (User user : allUsers) {
             if (user.getSurname().equals(surname)) {
-                return user;
+                retunUsers.add(user);
             }
         }
-        return null;
+        return retunUsers;
     }
 
     @Override
-    public User findByAge(int age) {
+    public List<User> findByAge(int age) {
         List<User> allUsers = Database.getAllUser();
+        List<User> retunUsers = new ArrayList<>();
         for (User user : allUsers) {
             if (user.getAge() == age) {
-                return user;
+                retunUsers.add(user);
             }
         }
-        return null;
+        return retunUsers;
     }
 }

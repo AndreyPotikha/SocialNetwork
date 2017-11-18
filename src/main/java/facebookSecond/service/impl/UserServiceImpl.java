@@ -19,15 +19,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User findByName(String name) {
+    public List<User> findByName(String name) {
         if (name == null) {
-            return new User();
+            return null;
         }
         return DaoFactory.getUserDao().findByName(name);
     }
 
     @Override
-    public User findBySurname(String surname) {
+    public List<User> findBySurname(String surname) {
         if (surname == null) {
             return null;
         }
@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User findByAge(int age) {
+    public List<User> findByAge(int age) {
         String ageString = String.valueOf(age);
         if (ageString == null) {
             return null;

@@ -47,6 +47,8 @@ public class Database {
         user1.setSurname("Johnson");
         user1.setAge(40);
         users.add(user1);
+        User user2 = new User("Tom", "Smith", 40);
+        users.add(user2);
         return users;
     }
 

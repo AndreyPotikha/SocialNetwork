@@ -4,22 +4,24 @@ import facebookSecond.model.User;
 import facebookSecond.service.UserService;
 import facebookSecond.service.factory.ServiceFactory;
 
+import java.util.List;
+
 public class UserController {
 
     public static void main(String[] args) {
 //      Search by age
         UserService userAge = ServiceFactory.getUserService();
-        User age = userAge.findByAge(40);
+        List<User> age = userAge.findByAge(40);
         System.out.println(age);
 
 //        Search by surname
         UserService userSurname = ServiceFactory.getUserService();
-        User surname = userSurname.findBySurname("Smith");
+        List<User> surname = userSurname.findBySurname("Smith");
         System.out.println(surname);
 
 //        Search by name
         UserService userName = ServiceFactory.getUserService();
-        User name = userName.findByName("Alex");
+        List<User> name = userName.findByName("Alex");
         System.out.println(name);
 
 
