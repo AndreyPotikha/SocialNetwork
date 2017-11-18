@@ -13,8 +13,8 @@ public class PostController {
     public static void main(String[] args) {
 //      Search by title
         PostService postTitle = new PostServiceImpl();
-        Post post = postTitle.findByTitle("football");
-        System.out.println(post);
+        List<Post> title = postTitle.findByTitle("football");
+        System.out.println(title);
 
 //      Search by data
         PostService postData = new PostServiceImpl();

@@ -17,14 +17,15 @@ public class PostDaoImpl implements PostDao{
     }
 
     @Override
-    public Post findByTitle(String title) {
+    public List<Post> findByTitle(String title) {
         List<Post> posts = Database.getAllPost();
+        List<Post> returnPost = new ArrayList<>();
         for (Post post : posts) {
             if (post.getTitle().contains(title)) {
-                return post;
+                returnPost.add(post);
             }
         }
-        return null;
+        return returnPost;
     }
 
     @Override

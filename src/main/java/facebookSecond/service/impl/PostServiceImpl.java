@@ -22,7 +22,7 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public Post findByTitle(String title) {
+    public List<Post> findByTitle(String title) {
         if (title == null) {
             return null;
         }

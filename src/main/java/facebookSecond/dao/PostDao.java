@@ -10,7 +10,7 @@ public interface PostDao {
 
     List<Post> getAllPost();
 
-    Post findByTitle(String title);
+    List<Post> findByTitle(String title);
 
     List<Post> findByDate(LocalDate date);
 }

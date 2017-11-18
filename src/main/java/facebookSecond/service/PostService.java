@@ -10,7 +10,7 @@ public interface PostService {
 
     List<Post> getAllPost();
 
-    Post findByTitle(String title);
+    List<Post> findByTitle(String title);
 
     List<Post> findByData(LocalDate date);
 }
