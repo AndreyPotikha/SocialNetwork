@@ -1,7 +1,12 @@
 package facebookSecond.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class Group {
 
     private String name;
@@ -17,7 +22,7 @@ public class Group {
                 '}';
     }
 
-    public String getName() {
+   /* public String getName() {
         return name;
     }
     public void setName(String name) {
@@ -34,5 +39,5 @@ public class Group {
     }
     public void setDateOfCreate(LocalDate dateOfCreate) {
         this.dateOfCreate = dateOfCreate;
-    }
+    }*/
 }

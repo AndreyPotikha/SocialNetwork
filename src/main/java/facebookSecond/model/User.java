@@ -1,6 +1,19 @@
 package facebookSecond.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
+    private String name;
+    private String surname;
+    private int age;
+
     @Override
     public String toString() {
         return "User " +
@@ -8,19 +21,15 @@ public class User {
                 ", surname='" + surname + '\'' +
                 ", age=" + age;
     }
+  /*  public User() { }*/
 
-    public User() { }
-    public User(String name, String surname, int age) {
+   /* public User(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-    }
+    }*/
 
-    private String name;
-    private String surname;
-    private int age;
-
-    public int getAge() { return age; }
+   /* public int getAge() { return age; }
     public void setAge(int age) { this.age = age; }
     public String getName() {
         return name;
@@ -33,5 +42,5 @@ public class User {
     }
     public void setSurname(String surname) {
         this.surname = surname;
-    }
+    }*/
 }

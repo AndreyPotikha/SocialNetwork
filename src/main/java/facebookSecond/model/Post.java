@@ -1,7 +1,12 @@
 package facebookSecond.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class Post {
 
     private String title;
@@ -16,7 +21,7 @@ public class Post {
                 ", dateOfPost=" + dateOfPost;
     }
 
-    public LocalDate getDateOfPost() { return dateOfPost; }
+    /*public LocalDate getDateOfPost() { return dateOfPost; }
     public void setDateOfPost(LocalDate dateOfPost) { this.dateOfPost = dateOfPost; }
     public String getTitle() {
         return title;
@@ -29,5 +34,5 @@ public class Post {
     }
     public void setDescription(String description) {
         this.description = description;
-    }
+    }*/
 }
