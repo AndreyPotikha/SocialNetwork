@@ -26,7 +26,6 @@ public class UserService {
         final int unicode = vertexCounter.countUnicod("text");
         System.out.println(unicode);*/
 
-        // todo create method getBy...(all fields)
     }
 
     private static User getByProffesion(String proffesion) {

@@ -11,7 +11,7 @@ public class FileServiceFromScanImpl implements FileServiceFromScan {
     public void write(String text, int number) {
         String path;
         switch (number) {
-            case 1: path = "src\\Main\\resources\\objective\\file";
+            case 1: path = "src\\User\\resources\\objective\\file";
                 File file = new File(path);
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
                     writer.write(text);
@@ -21,7 +21,7 @@ public class FileServiceFromScanImpl implements FileServiceFromScan {
                     e.printStackTrace();
                 }
                 break;
-            case 2: path = "src\\Main\\resources\\objective\\jsons";
+            case 2: path = "src\\User\\resources\\objective\\jsons";
                 file = new File(path);
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
                     writer.write(text);
@@ -31,7 +31,7 @@ public class FileServiceFromScanImpl implements FileServiceFromScan {
                     e.printStackTrace();
                 }
                 break;
-            case 3: path = "src\\Main\\resources\\objective\\user";
+            case 3: path = "src\\User\\resources\\objective\\user";
                 file = new File(path);
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
                     writer.write(text);
@@ -41,7 +41,7 @@ public class FileServiceFromScanImpl implements FileServiceFromScan {
                     e.printStackTrace();
                 }
                 break;
-            case 4: path = "src\\Main\\resources\\objective\\users";
+            case 4: path = "src\\User\\resources\\objective\\users";
                 file = new File(path);
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
                     writer.write(text);
@@ -52,7 +52,7 @@ public class FileServiceFromScanImpl implements FileServiceFromScan {
                 }
                 break;
         }
-        /*String path = "src\\Main\\resources\\objective\\file";
+        /*String path = "src\\User\\resources\\objective\\file";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));) {
             writer.write(text);

@@ -6,7 +6,7 @@ public class FileServiceChangeImpl implements FileServiceChange {
 
     @Override
     public void write(String readFile) {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(readFile);
@@ -19,7 +19,7 @@ public class FileServiceChangeImpl implements FileServiceChange {
 
     @Override
     public String read() {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
         StringBuilder builder = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){

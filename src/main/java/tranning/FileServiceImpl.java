@@ -7,7 +7,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public void write(String text) {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
 
         try (FileWriter writer = new FileWriter(file, true)){
@@ -20,7 +20,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public String read() {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
         StringBuilder builder = new StringBuilder();
 
@@ -40,7 +40,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public void writeBuffer(String text) {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));){
@@ -54,7 +54,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public String readBuffer() {
-        String path = "src\\Main\\resources\\objective\\file";
+        String path = "src\\User\\resources\\objective\\file";
         File file = new File(path);
         StringBuilder builder = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))){
