@@ -1,12 +1,13 @@
 package facebookSecond.service;
 
 import facebookSecond.model.Post;
+import facebookSecond.model.User;
 import javafx.geometry.Pos;
 
 import java.time.LocalDate;
 import java.util.List;
 
-public interface PostService {
+public interface PostService  extends CrudService<Post>{
 
     List<Post> getAllPost();
 

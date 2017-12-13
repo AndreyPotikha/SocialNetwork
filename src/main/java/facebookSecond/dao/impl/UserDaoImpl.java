@@ -50,4 +50,21 @@ public class UserDaoImpl implements UserDao{
         }
         return retunUsers;
     }
+
+    @Override
+    public void creat(User user) {
+        System.out.println(user.getName() + " created");
+    }
+
+    @Override
+    public void update(User user) {
+        System.out.println(user.getName() + " updated");
+    }
+
+    @Override
+    public void del(Long id) {
+        System.out.println("user with id: " + id + " deleted");
+    }
+
+
 }

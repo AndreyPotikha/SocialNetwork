@@ -3,6 +3,7 @@ package facebookSecond.dao.impl;
 import facebookSecond.dao.PostDao;
 import facebookSecond.data.Database;
 import facebookSecond.model.Post;
+import facebookSecond.model.User;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -39,4 +40,20 @@ public class PostDaoImpl implements PostDao{
         }
         return returnPost;
     }
+
+    @Override
+    public void creat(Post post) {
+        System.out.println(post.getTitle() + " created");
+    }
+
+    @Override
+    public void update(Post post) {
+        System.out.println(post.getTitle() + " update");
+    }
+
+    @Override
+    public void del(Long idPost) {
+        System.out.println(idPost + " delated");
+    }
+
 }

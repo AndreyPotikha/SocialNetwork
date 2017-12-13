@@ -12,4 +12,19 @@ public class GroupDaoImpl implements GroupDao{
         return Database.gettAllGroup();
     }
 
+    @Override
+    public void creat(Group group) {
+        System.out.println(group.getFollowrs() + " created");
+    }
+
+    @Override
+    public void update(Group group) {
+        System.out.println(group.getFollowrs() + " update");
+    }
+
+    @Override
+    public void del(Long idGroup) {
+        System.out.println(idGroup + " deleted");
+    }
+
 }

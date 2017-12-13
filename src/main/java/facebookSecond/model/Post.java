@@ -7,18 +7,20 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class Post {
+public class Post extends AbstactEntity{
 
     private String title;
     private String description;
     private LocalDate dateOfPost;
+
 
     @Override
     public String toString() {
         return "Post " +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", dateOfPost=" + dateOfPost;
+                ", dateOfPost=" + dateOfPost
+                + ", id = " + getId();
     }
 
     /*public LocalDate getDateOfPost() { return dateOfPost; }

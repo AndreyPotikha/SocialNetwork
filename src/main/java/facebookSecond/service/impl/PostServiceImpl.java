@@ -1,10 +1,13 @@
 package facebookSecond.service.impl;
 
 import facebookSecond.dao.PostDao;
+import facebookSecond.dao.UserDao;
 import facebookSecond.dao.factory.DaoFactory;
 import facebookSecond.dao.impl.PostDaoImpl;
+import facebookSecond.dao.impl.UserDaoImpl;
 import facebookSecond.data.Database;
 import facebookSecond.model.Post;
+import facebookSecond.model.User;
 import facebookSecond.service.PostService;
 
 import java.time.LocalDate;
@@ -36,4 +39,24 @@ public class PostServiceImpl implements PostService{
         }
         return DaoFactory.getPostDao().findByDate(date);
     }
+
+    @Override
+    public void creat(Post post) {
+        PostDao postDao = new PostDaoImpl();
+        postDao.creat(post);
+    }
+
+    @Override
+    public void update(Post post) {
+        PostDao postDao = new PostDaoImpl();
+        postDao.update(post);
+    }
+
+    @Override
+    public void del(Long idPost) {
+        PostDao postDao = new PostDaoImpl();
+        postDao.del(idPost);
+    }
+
+
 }

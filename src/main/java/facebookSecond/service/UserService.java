@@ -2,9 +2,10 @@ package facebookSecond.service;
 
 import facebookSecond.model.User;
 
+import java.time.LocalDate;
 import java.util.List;
 
-public interface UserService {
+public interface UserService extends CrudService<User>{
 
     List<User> getAllUser();
 

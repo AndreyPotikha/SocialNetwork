@@ -9,17 +9,20 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User extends AbstactEntity{
+
     private String name;
     private String surname;
     private int age;
+
 
     @Override
     public String toString() {
         return "User " +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", age=" + age;
+                ", age=" + age
+                + ", id = " + getId();
     }
   /*  public User() { }*/
 

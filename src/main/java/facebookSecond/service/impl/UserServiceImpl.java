@@ -2,6 +2,7 @@ package facebookSecond.service.impl;
 
 import facebookSecond.dao.UserDao;
 import facebookSecond.dao.factory.DaoFactory;
+import facebookSecond.dao.impl.UserDaoImpl;
 import facebookSecond.model.User;
 import facebookSecond.service.UserService;
 
@@ -42,4 +43,24 @@ public class UserServiceImpl implements UserService{
         }
         return DaoFactory.getUserDao().findByAge(age);
     }
+
+    @Override
+    public void creat(User user) {
+        UserDao userDao = new UserDaoImpl();
+        userDao.creat(user);
+    }
+
+    @Override
+    public void update(User user) {
+        UserDao userDao = new UserDaoImpl();
+        userDao.update(user);
+    }
+
+    @Override
+    public void del(Long id) {
+        UserDao userDao = new UserDaoImpl();
+        userDao.del(id);
+    }
+
+
 }

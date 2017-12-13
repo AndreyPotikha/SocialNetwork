@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class Group {
+public class Group extends AbstactEntity{
 
     private String name;
     private String followrs;
