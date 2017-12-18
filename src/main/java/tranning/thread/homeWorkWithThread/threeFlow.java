@@ -1,14 +1,16 @@
 package tranning.thread.homeWorkWithThread;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class threeFlow {
 
-    private static List<Integer> firstList = new ArrayList<>();
-    private static List<Integer> secondList = new ArrayList<>();
-    private static List<Integer> finalList = new ArrayList<>();
+    private static List<Integer> firstList;
+    private static List<Integer> secondList;
+    private static List<Integer> finalList;
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -17,21 +19,25 @@ public class threeFlow {
         SecondWrite secondWrite = new SecondWrite();
         secondWrite.start();
         secondWrite.join();
-        FinalWrite finalWrite = new FinalWrite();
+       /* FinalWrite finalWrite = new FinalWrite();
         finalWrite.start();
-        finalWrite.join();
+        finalWrite.join();*/
         System.out.println(firstList);
         System.out.println(secondList);
-        System.out.println(finalList);
+        for (Integer elem : firstList) {
+            System.out.println(elem);
+            finalList.add(elem);
+        }
+
+
     }
 
     private static class FirstWrite extends Thread {
 
         @Override
         public void run() {
-            for (int i = 2; i <= 12; i+=2) {
-                firstList.add(i);
-            }
+            IntStream stream = IntStream.of(2, 4, 6, 8, 10, 12);
+            firstList = stream.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         }
     }
 
@@ -39,9 +45,8 @@ public class threeFlow {
 
         @Override
         public void run() {
-            for (int i = 1; i < 12; i += 2) {
-                secondList.add(i);
-            }
+            IntStream stream = IntStream.of(1, 3, 5, 7, 9, 11);
+            secondList = stream.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         }
     }
 
